@@ -1,0 +1,225 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial bold, sans-serif;
+    background-color: linear-gradient(skyblue, white);
+    color: #333;
+    margin: 0;
+}
+
+nav {
+    background-color: #222;
+    color: white;
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav h2 {
+    margin: 0;
+    color:rgb(87, 203, 249);
+    animation: slideDown 1s ease;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00bfff;
+}
+
+header {
+    background:fixed linear-gradient(to bottom, rgb(32, 192, 255), black);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+
+    font-family: "Press Start 2P", cursive;
+
+    animation: fadeIn 1.5s ease;
+}
+
+header h1 {
+    font-size: 40px;
+    animation: slideDown 1s ease;
+}
+
+header p {
+    font-size: 20px;
+    animation: slideUp 1s ease;
+}
+
+section {
+    background-color: white;
+
+    margin: 30px auto;
+    padding: 30px;
+
+    max-width: 800px;
+    
+    cursor: pointer;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    animation: fadeIn 1s ease;
+}
+
+section h2 {
+    color: #00a6d6;
+}
+
+section img {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    display: block;
+    margin: 20px auto;
+
+    transition: 0.5s;
+}
+
+section img:hover {
+    transform: rotate(360deg) scale(1.1);
+}
+
+#skills li {
+    margin: 10px;
+    transition: 0.3s;
+}
+
+#skills li:hover {
+    color: #00a6d6;
+    transform: translateX(10px);
+}
+
+.hobbies-container {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background-color: #eeeeee;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    flex: 1;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    animation: slideUp 1s ease;
+}
+
+.card:hover {
+    background-color: skyblue;
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.button {
+    display: inline-block;
+
+    background-color: #00bfff;
+    color: white;
+
+    padding: 12px 20px;
+    cursor: pointer;
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: silver;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        padding: 0;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .hobbies-container {
+        flex-direction: column;
+    }
+}
